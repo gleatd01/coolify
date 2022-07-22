@@ -1,6 +1,4 @@
-FROM nextcloud:apache
+FROM nextcloud:fpm
 ENV NEXTCLOUD_UPDATE=1
-Run apt update
-RUN apt install supervisor
-EXPOSE 80
+EXPOSE 9000
 CMD ["/usr/bin/supervisord"]
