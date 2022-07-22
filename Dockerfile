@@ -1,5 +1,6 @@
 FROM nextcloud:apache
 ENV NEXTCLOUD_UPDATE=1
-RUN pip install supervisor
+Run apt update
+RUN apt install supervisor
 EXPOSE 80
 CMD ["/usr/bin/supervisord"]
